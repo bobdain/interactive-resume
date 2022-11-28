@@ -1,28 +1,113 @@
-.App {
-  text-align: center;
+body{
+    height: 100%;
+    background-color: #221f20;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.my-navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    /* font-size: calc(10px + 2vmin); */
+    font-size: 20pt;
+    min-height: 20vh;
+} 
+
+.my-nav-button {
+    color: rgb(212, 209, 209);
+    background-color: transparent;
+    height: 40px;
+    width: 260px;
+    border-color: transparent;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flexbox-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.absolute-images {
+    position: static;
+}
+
+.circle-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+    padding: 20px;
+    /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+    border: dashed 1px;
+    border-radius: 50%;
+    margin: 60px auto;
+    color: transparent;
+}
+
+.image-area {
+    display: block;
+    position: relative;
+    margin: auto;
+    height: 100%;
+}
+
+/* .circle-container img {
+    display: block;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    height: 100px;
+} */
+
+.fixed-position {
+    display: block;
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+}
+
+.portrait {
+    background-color: rgb(204, 201, 201);
+    padding: 5px;
+    border-radius: 10%;
+}
+
+.corporate-logo  {
+    height: 100px;
+}
+
+.portrait-position { transform: translate(-50%, -50%); }
+.image1-position { transform:  translate(-50%, -50%) rotate(-54deg) translate(380px) rotate(54deg); }
+.image2-position { transform:  translate(-50%, -50%) rotate(-23deg) translate(380px) rotate(23deg); }
+.image3-position { transform:  translate(-50%, -50%) rotate(8deg) translate(380px) rotate(-8deg); }
+.image4-position { transform:  translate(-50%, -50%) rotate(39deg) translate(380px) rotate(-39deg); }
+.image5-position { transform:  translate(-50%, -50%) rotate(90deg) translate(380px) rotate(-90deg); }
+.image6-position { transform:  translate(-50%, -50%) rotate(141deg) translate(380px) rotate(-141deg); }
+.image7-position { transform:  translate(-50%, -50%) rotate(172deg) translate(380px) rotate(-172deg); }
+.image8-position { transform:  translate(-50%, -50%) rotate(203deg) translate(380px) rotate(-203deg); }
+.image9-position { transform:  translate(-50%, -50%) rotate(234deg) translate(380px) rotate(-234deg); }
+
+.rotate-ccw {
+    transform: rotate(-10deg);
+    margin-top: 30px;
+}
+
+.rotate-cw {
+    transform: rotate(10deg);
+    margin-top: 40px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    background-color: #221f20;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
 
 .App-link {
   color: #61dafb;
