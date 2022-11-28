@@ -2,7 +2,7 @@ import './App.css';
 import MyNavbar from './components/MyNavbar';
 import ImageArray from './components/ImageArray';
 
-// Test
+// Test 1
 
 function App() {
     return (
