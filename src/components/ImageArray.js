@@ -25,7 +25,7 @@ const workHistoryImages = [
     { img: Microsoft, alt: 'Microsoft logo', class: 'fixed-position corporate-logo image8-position' },
     { img: Schneider, alt: 'Schneider Electric logo', class: 'fixed-position corporate-logo image9-position' },
    
-    { img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
+    // { img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];
     
 

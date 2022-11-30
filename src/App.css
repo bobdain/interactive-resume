@@ -51,14 +51,6 @@ body{
     height: 100%;
 }
 
-/* .circle-container img {
-    display: block;
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    height: 100px;
-} */
-
 .fixed-position {
     display: block;
     position: absolute;
@@ -87,37 +79,12 @@ body{
 .image8-position { transform:  translate(-50%, -50%) rotate(203deg) translate(380px) rotate(-203deg); }
 .image9-position { transform:  translate(-50%, -50%) rotate(234deg) translate(380px) rotate(-234deg); }
 
-.rotate-ccw {
+.rotate-ccw-10 {
     transform: rotate(-10deg);
     margin-top: 30px;
 }
 
-.rotate-cw {
+.rotate-cw-10 {
     transform: rotate(10deg);
     margin-top: 40px;
-}
-
-.App-header {
-    background-color: #221f20;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
-  }
-  
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
