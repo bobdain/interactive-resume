@@ -9,8 +9,7 @@ import Microsoft from '../assets/employer-icons/microsoft-1.jpeg';
 import Schneider from '../assets/employer-icons/schneider-electric-1.png';
 import Tektronix from '../assets/employer-icons/tektronix-1.jpg';
 import ThermoFisher from '../assets/employer-icons/thermo-fisher-1.png';
-
-//import Boeing1 from '../assets/employer-icons/boeing-1.jpg';
+import GoVerbs from '../assets/website-icons/go-verbs.png';
 
 const workHistoryImages = [
     { img: Kymeta, alt: 'Kymeta logo', class: 'fixed-position corporate-logo image1-position' },
@@ -24,8 +23,9 @@ const workHistoryImages = [
     { img: Elektrobit, alt: 'Elektrobit logo', class: 'fixed-position corporate-logo image7-position' },
     { img: Microsoft, alt: 'Microsoft logo', class: 'fixed-position corporate-logo image8-position' },
     { img: Schneider, alt: 'Schneider Electric logo', class: 'fixed-position corporate-logo image9-position' },
+    //{ img: GoVerbs, alt: 'Schneider Electric logo', class: 'fixed-position corporate-logo image9-position' },
    
-    // { img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
+    //{ img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];
     
 
