@@ -94,19 +94,19 @@ const Navbar = (props) => {
         <div className='navbar'>
             <NavButton
                 text='Who I Am'
-                buttonId='0'
+                buttonId={0}
                 className='nav-button rotate-ccw-10'
                 style={styles[0]}
                 selectedStyle={selectedStyle} />
             <NavButton
                 text='Where I&rsquo;ve Been'
-                buttonId='1'
+                buttonId={1}
                 className='nav-button'
                 style={styles[1]}
                 selectedStyle={selectedStyle} />
             <NavButton
                 text='What I Can Do'
-                buttonId='2'
+                buttonId={2}
                 className='nav-button rotate-cw-10'
                 style={styles[2]}
                 selectedStyle={selectedStyle} />

@@ -2,17 +2,19 @@ import './App.css';
 import Navbar from './components/Navbar';
 import ImageArray from './components/ImageArray';
 import { useReducer, createContext, useState, useEffect } from 'react';
-import ButtonStateContext from './components/ButtonState.js';
+import ButtonStateContext from './components/ButtonState';
+import Store from './Store'
 
-
-//const buttonState = 1;
+// const state = {
+//     selectedButton: 1
+// }
 
 function reducer(state, item) {
-    return [...state, item]
+    return {...state, item}
 }
 
 function App() {
-    const [buttonState, setButtonState] = useReducer(reducer, []);
+    const [selectedButton, setSelectedButton] = useReducer(reducer, {item: 1});
 
     // TODO: Move this into utility component
     const [windowSize, setWindowSize] = useState([
@@ -34,14 +36,14 @@ function App() {
       });
 
     return (
-        <ButtonStateContext.Provider value={{ buttonState, setButtonState }}>
+        <Store.Provider value={{selectedButton, setSelectedButton}}>
             <Navbar  windowWidth={windowSize[0]}/>
             <div className='image-area'>
                 <div className='circle-container' >
                     <ImageArray windowWidth={windowSize[0]} />
                 </div>
             </div>
-        </ButtonStateContext.Provider>
+        </Store.Provider>
     );
 }
 

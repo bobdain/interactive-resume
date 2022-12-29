@@ -1,14 +1,17 @@
 import React, { useContext, useState, useReducer } from 'react';
-import { store } from '../store.js';
+import { store } from '../Store.js';
 import { useSpring, animated } from 'react-spring'
-import ButtonStateContext from './ButtonState.js';
-import { color, style } from '@mui/system';
+import Store from '../Store';
+//import ButtonStateContext from './ButtonState.js';
+//import { color, style } from '@mui/system';
 
 const NavButton = (props) => {
+    const state = useContext(Store);
+    console.log(state);
 
     const reducer = key => key + 1;
-    const { setButtonState } = useContext(ButtonStateContext);
-    const [id, updateId] = useReducer(reducer, 0);
+    //const { setButtonState } = useContext(ButtonStateContext);
+    //const [id, updateId] = useReducer(reducer, 0);
 
 //    function update() {
         // setButtonState({
@@ -18,8 +21,9 @@ const NavButton = (props) => {
         // updateId();
 //    };
 
+    //const [selectedButton, setSelectedButton] = useState(1);
+
     const {'font-size': fontSize, 'expanded-font-size': expandedFontSize} = props.style;
-    // console.log('MY DATA:', fontSize, ' ', expandedFontSize);
 
     const onClick = (buttonId) => {
         setStep({
@@ -28,6 +32,7 @@ const NavButton = (props) => {
         });
 
         //update();
+        state.setSelectedButton(props.buttonId);
     }
 
     const onMouseEnter = (buttonId) => {
@@ -54,7 +59,9 @@ const NavButton = (props) => {
         from: step.fontSizeStart,
     });
 
-    const customStyle = { ...props.style, ...props.selectedStyle, ...spring };
+    const customStyle = props.buttonId === state.selectedButton.item 
+        ? { ...props.style, ...props.selectedStyle, ...spring }
+        : { ...props.style, ...spring };
 
     return (
         <animated.button className={props.className} style={customStyle}
