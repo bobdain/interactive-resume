@@ -3,22 +3,26 @@ body{
     background-color: #221f20;
 }
 
-.my-navbar {
+/* @font-face {
+    font-family: 'MyFont';
+    src: local('MyFont'), url(./assets/fonts/Cafe\ Francoise_D.otf) format('otf');
+} */
+
+.navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     /* font-size: calc(10px + 2vmin); */
-    font-size: 20pt;
+    /* font-size: 20pt; */
+    font-family: 'Brush Script MT', cursive;
     min-height: 20vh;
 } 
 
-.my-nav-button {
+.nav-button {
     color: rgb(212, 209, 209);
     background-color: transparent;
-    height: 40px;
-    width: 260px;
-    border-color: transparent;
+    border-color: grey;
 }
 
 .flexbox-center {
@@ -30,6 +34,10 @@ body{
 
 .absolute-images {
     position: static;
+}
+
+.window-size-test {
+    color: rgb(212, 209, 209);
 }
 
 .circle-container {
@@ -68,6 +76,7 @@ body{
     height: 100px;
 }
 
+.test-position { transform: translate(300px, 300px); }
 .portrait-position { transform: translate(-50%, -50%); }
 .image1-position { transform:  translate(-50%, -50%) rotate(-54deg) translate(380px) rotate(54deg); }
 .image2-position { transform:  translate(-50%, -50%) rotate(-23deg) translate(380px) rotate(23deg); }
@@ -81,10 +90,8 @@ body{
 
 .rotate-ccw-10 {
     transform: rotate(-10deg);
-    margin-top: 30px;
 }
 
 .rotate-cw-10 {
     transform: rotate(10deg);
-    margin-top: 40px;
 }

@@ -1,7 +1,7 @@
 import './App.css';
-import MyNavbar from './components/MyNavbar';
+import Navbar from './components/Navbar';
 import ImageArray from './components/ImageArray';
-import { useReducer, createContext } from 'react';
+import { useReducer, createContext, useState, useEffect } from 'react';
 import ButtonStateContext from './components/ButtonState.js';
 
 
@@ -14,12 +14,31 @@ function reducer(state, item) {
 function App() {
     const [buttonState, setButtonState] = useReducer(reducer, []);
 
+    // TODO: Move this into utility component
+    const [windowSize, setWindowSize] = useState([
+        window.innerWidth,
+        window.innerHeight,
+      ]);
+
+    // TODO: Move this into utility component
+    useEffect(() => {
+        const handleWindowResize = () => {
+          setWindowSize([window.innerWidth, window.innerHeight]);
+        };
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      });
+
     return (
         <ButtonStateContext.Provider value={{ buttonState, setButtonState }}>
-            <MyNavbar />
+            <Navbar  windowWidth={windowSize[0]}/>
             <div className='image-area'>
                 <div className='circle-container' >
-                    <ImageArray />
+                    <ImageArray windowWidth={windowSize[0]} />
                 </div>
             </div>
         </ButtonStateContext.Provider>
