@@ -19,7 +19,7 @@ const NavButton = (props) => {
 //    };
 
     const {'font-size': fontSize, 'expanded-font-size': expandedFontSize} = props.style;
-    console.log('MY DATA:', fontSize, ' ', expandedFontSize);
+    // console.log('MY DATA:', fontSize, ' ', expandedFontSize);
 
     const onClick = (buttonId) => {
         setStep({
@@ -52,16 +52,9 @@ const NavButton = (props) => {
     const spring = useSpring({
         fontSize: step.fontSizeEnd,
         from: step.fontSizeStart,
-
     });
 
-    const redObj = {
-
-        width: '450px'
-    };
-
-    //console.log(spring);
-    const customStyle = { ...props.style, ...spring };
+    const customStyle = { ...props.style, ...props.selectedStyle, ...spring };
 
     return (
         <animated.button className={props.className} style={customStyle}

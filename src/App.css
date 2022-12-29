@@ -22,7 +22,7 @@ body{
 .nav-button {
     color: rgb(212, 209, 209);
     background-color: transparent;
-    border-color: grey;
+    border-color: transparent;
 }
 
 .flexbox-center {

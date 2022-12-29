@@ -10,7 +10,9 @@ const rightTopMargins = ['20px', '33px', '35px', '40px', '50px'];
 const fontSizes = ['14pt', '17pt', '20pt', '25pt', '30pt'];
 const expandedFontSizes = ['16.8pt', '20.4pt', '24pt', '30pt', '36pt'];
 
-const createStyles = (index) => {
+const createStylesByWidth = (width) => {
+    const index = getIndexByWidth(width);
+
     return ([{
         'width': leftButtonWidths[index],
         'margin-top': leftTopMargins[index],
@@ -29,37 +31,60 @@ const createStyles = (index) => {
     }]);
 }
 
-const createStylesByWidth = (width) => {
-    if (width >= 1200) return createStyles(4);
-    if (width >= 992) return createStyles(3);
-    if (width >= 768) return createStyles(2);
-    if (width >= 576) return createStyles(1);
+const getIndexByWidth = (width) => {
+    if (width >= 1200) return 4;
+    if (width >= 992) return 3;
+    if (width >= 768) return 2;
+    if (width >= 576) return 1;
+    return 0;
+}
 
-    return createStyles(0);
+const createSelectedStyleByWidth = (width) => {
+    const index = getIndexByWidth(width);
+
+    return ({
+        'text-shadow': '0 0 30px #aa0',
+        'text-decoration': 'underline'
+    });
 }
 
 const xsStyle = {
     'width': '300px',
     'font-size': '14pt',
     'margin-top': '10px',
-    'background-color': 'red'
 }
 
 const Navbar = (props) => {
     const styles = createStylesByWidth(props.windowWidth);
+    const selectedStyle = createSelectedStyleByWidth(props.windowWidth);
 
     // Extra small
     if (props.windowWidth < 576) {
         return (
             <>
-                <Row className='text-center' style={{'background-color': 'red'}}>
-                    <NavButton text='Who I Am' buttonId='0' className='nav-button' style={xsStyle} />
+                <Row className='text-center' style={{}}>
+                    <NavButton
+                        text='Who I Am'
+                        buttonId='0'
+                        className='nav-button'
+                        style={xsStyle}
+                        selectedStyle={selectedStyle} />
                 </Row>
                 <Row>
-                    <NavButton text='Where I&rsquo;ve Been' buttonId='1' className='nav-button left-button-xl' style={xsStyle} />
+                    <NavButton
+                        text='Where I&rsquo;ve Been'
+                        buttonId='1'
+                        className='nav-button'
+                        style={xsStyle}
+                        selectedStyle={selectedStyle} />
                 </Row>
                 <Row>
-                    <NavButton text='What I Can Do' buttonId='2' className='nav-button' style={xsStyle} />
+                    <NavButton
+                        text='What I Can Do'
+                        buttonId='2'
+                        className='nav-button'
+                        style={xsStyle}
+                        selectedStyle={selectedStyle} />
                 </Row>
             </>
         );
@@ -67,9 +92,24 @@ const Navbar = (props) => {
 
     return (
         <div className='navbar'>
-            <NavButton text='Who I Am' buttonId='0' className='nav-button left-button-xl rotate-ccw-10' style={styles[0]} />
-            <NavButton text='Where I&rsquo;ve Been' buttonId='1' className='nav-button left-button-xl' style={styles[1]} />
-            <NavButton text='What I Can Do' buttonId='2' className='nav-button left-button-xl rotate-cw-10' style={styles[2]} />
+            <NavButton
+                text='Who I Am'
+                buttonId='0'
+                className='nav-button rotate-ccw-10'
+                style={styles[0]}
+                selectedStyle={selectedStyle} />
+            <NavButton
+                text='Where I&rsquo;ve Been'
+                buttonId='1'
+                className='nav-button'
+                style={styles[1]}
+                selectedStyle={selectedStyle} />
+            <NavButton
+                text='What I Can Do'
+                buttonId='2'
+                className='nav-button rotate-cw-10'
+                style={styles[2]}
+                selectedStyle={selectedStyle} />
         </div>
     )
 }
