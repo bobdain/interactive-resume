@@ -1,6 +1,7 @@
-import { Col, Row } from 'reactstrap';
+import { Row } from 'reactstrap';
 import NavButton from './NavButton';
-import { useWindowWidth } from '@react-hook/window-size'
+import { useContext } from 'react';
+import Store from '../Store';
 
 const leftButtonWidths = ['300px', '140px', '160px', '190px', '230px'];
 const centerButtonWidths = ['300px', '220px', '260px', '320px', '380px'];
@@ -10,23 +11,24 @@ const rightTopMargins = ['20px', '33px', '35px', '40px', '50px'];
 const fontSizes = ['14pt', '17pt', '20pt', '25pt', '30pt'];
 const expandedFontSizes = ['16.8pt', '20.4pt', '24pt', '30pt', '36pt'];
 
-const createStylesByWidth = (width) => {
+const createStylesByWidth = (width, state) => {
     const index = getIndexByWidth(width);
+    const selectedButton = state.selectedButton.item;
 
     return ([{
         'width': leftButtonWidths[index],
         'margin-top': leftTopMargins[index],
-        'font-size': fontSizes[index],
+        'font-size': selectedButton === 0 ? expandedFontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }, {
         'width': centerButtonWidths[index],
         'margin-top': 0,
-        'font-size': fontSizes[index],
+        'font-size': selectedButton === 1 ? expandedFontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }, {
         'width': rightButtonWidths[index],
         'margin-top': rightTopMargins[index],
-        'font-size': fontSizes[index],
+        'font-size': selectedButton === 2 ? expandedFontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }]);
 }
@@ -43,7 +45,7 @@ const createSelectedStyleByWidth = (width) => {
     const index = getIndexByWidth(width);
 
     return ({
-        'text-shadow': '0 0 30px #aa0',
+        'text-shadow': '0 0 30px #77d',
         'text-decoration': 'underline'
     });
 }
@@ -55,7 +57,8 @@ const xsStyle = {
 }
 
 const Navbar = (props) => {
-    const styles = createStylesByWidth(props.windowWidth);
+    const state = useContext(Store);
+    const styles = createStylesByWidth(props.windowWidth, state);
     const selectedStyle = createSelectedStyleByWidth(props.windowWidth);
 
     // Extra small

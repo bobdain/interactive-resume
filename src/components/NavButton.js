@@ -1,48 +1,38 @@
 import React, { useContext, useState, useReducer } from 'react';
-import { store } from '../Store.js';
 import { useSpring, animated } from 'react-spring'
 import Store from '../Store';
-//import ButtonStateContext from './ButtonState.js';
-//import { color, style } from '@mui/system';
+
+// NOTE:
+// The button that has just lost the selected state needs to do the spring animation. 
+// That will probably fix the broken spring behavior.
+
 
 const NavButton = (props) => {
     const state = useContext(Store);
-    console.log(state);
-
-    const reducer = key => key + 1;
-    //const { setButtonState } = useContext(ButtonStateContext);
-    //const [id, updateId] = useReducer(reducer, 0);
-
-//    function update() {
-        // setButtonState({
-        //   name,
-        //   id: `${name}-${id}`
-        // })
-        // updateId();
-//    };
-
-    //const [selectedButton, setSelectedButton] = useState(1);
-
     const {'font-size': fontSize, 'expanded-font-size': expandedFontSize} = props.style;
+    const selectedButton = state.selectedButton.item;
 
-    const onClick = (buttonId) => {
+    const onClick = () => {
         setStep({
-            fontSizeStart: fontSize,
-            fontSizeEnd: fontSize,
+            fontSizeStart: expandedFontSize,
+            fontSizeEnd: expandedFontSize,
         });
 
-        //update();
         state.setSelectedButton(props.buttonId);
     }
 
-    const onMouseEnter = (buttonId) => {
+    const onMouseEnter = () => {
+        console.log('MOUSE ENTER  STEP:', fontSize, ' to ', expandedFontSize);
+
         setStep({
             fontSizeStart: fontSize,
             fontSizeEnd: expandedFontSize,
         });
     }
 
-    const onMouseLeave = (buttonId) => {
+    const onMouseLeave = () => {
+        console.log('MOUSE LEAVE');
+
         setStep({
             fontSizeStart: expandedFontSize,
             fontSizeEnd: fontSize,
@@ -59,7 +49,7 @@ const NavButton = (props) => {
         from: step.fontSizeStart,
     });
 
-    const customStyle = props.buttonId === state.selectedButton.item 
+    const customStyle = props.buttonId === selectedButton 
         ? { ...props.style, ...props.selectedStyle, ...spring }
         : { ...props.style, ...spring };
 

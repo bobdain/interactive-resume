@@ -5,10 +5,6 @@ import { useReducer, createContext, useState, useEffect } from 'react';
 import ButtonStateContext from './components/ButtonState';
 import Store from './Store'
 
-// const state = {
-//     selectedButton: 1
-// }
-
 function reducer(state, item) {
     return {...state, item}
 }
