@@ -8,14 +8,13 @@ import { useWindowWidth } from '@react-hook/window-size'
 
 const SiteImageArray = (props) => {
     const websiteImages = [
-        { img: countryMeadow, alt: 'Kymeta logo', class: 'fixed-position corporate-logo image2-position' },
-        { img: dotsDots, alt: 'Fujifilm logo', class: 'fixed-position corporate-logo image3-position' },
+        { img: countryMeadow, alt: 'Country Meadow Ltd. logo', class: 'fixed-position corporate-logo image2-position' },
+        { img: dotsDots, alt: 'Dot\'s Dots game logo', class: 'fixed-position corporate-logo image3-position' },
 
-        { img: goVerbs, alt: 'Boeing logo', class: 'fixed-position corporate-logo-large image5-position' },
+        { img: goVerbs, alt: 'GoVerbs logo', class: 'fixed-position corporate-logo-large image5-position' },
 
-        { img: fredsMaze, alt: 'Elektrobit logo', class: 'fixed-position corporate-logo image7-position' },
-        { img: nucampSite, alt: 'Schneider Electric logo', class: 'fixed-position corporate-logo image8-position' },
-        //{ img: GoVerbs, alt: 'Schneider Electric logo', class: 'fixed-position corporate-logo image9-position' },
+        { img: fredsMaze, alt: 'Fred\'s Maze game logo', class: 'fixed-position corporate-logo image7-position' },
+        { img: nucampSite, alt: 'Nucamp-site logo', class: 'fixed-position corporate-logo image8-position' },
 
         //{ img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];

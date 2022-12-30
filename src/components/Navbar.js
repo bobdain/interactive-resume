@@ -18,17 +18,17 @@ const createStylesByWidth = (width, state) => {
     return ([{
         'width': leftButtonWidths[index],
         'margin-top': leftTopMargins[index],
-        'font-size': selectedButton === 0 ? expandedFontSizes[index] : fontSizes[index],
+        'font-size': selectedButton === 0 ? fontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }, {
         'width': centerButtonWidths[index],
         'margin-top': 0,
-        'font-size': selectedButton === 1 ? expandedFontSizes[index] : fontSizes[index],
+        'font-size': selectedButton === 1 ? fontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }, {
         'width': rightButtonWidths[index],
         'margin-top': rightTopMargins[index],
-        'font-size': selectedButton === 2 ? expandedFontSizes[index] : fontSizes[index],
+        'font-size': selectedButton === 2 ? fontSizes[index] : fontSizes[index],
         'expanded-font-size': expandedFontSizes[index]
     }]);
 }

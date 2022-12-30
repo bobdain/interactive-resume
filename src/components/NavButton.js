@@ -15,7 +15,7 @@ const NavButton = (props) => {
     const onClick = () => {
         setStep({
             fontSizeStart: expandedFontSize,
-            fontSizeEnd: expandedFontSize,
+            fontSizeEnd: fontSize,
         });
 
         state.setSelectedButton(props.buttonId);
