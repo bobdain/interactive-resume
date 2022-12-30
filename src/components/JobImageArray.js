@@ -12,7 +12,7 @@ import ThermoFisher from '../assets/employer-icons/thermo-fisher-1.png';
 import GoVerbs from '../assets/website-icons/go-verbs.png';
 import { useWindowWidth } from '@react-hook/window-size'
 
-const ImageArray = (props) => {
+const JobImageArray = (props) => {
     const workHistoryImages = [
         { img: Kymeta, alt: 'Kymeta logo', class: 'fixed-position corporate-logo image1-position' },
         { img: Tektronix, alt: 'Tektronix logo', class: 'fixed-position corporate-logo image2-position' },
@@ -40,4 +40,4 @@ const ImageArray = (props) => {
     )
 }
 
-export default ImageArray;
+export default JobImageArray;

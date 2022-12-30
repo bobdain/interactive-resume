@@ -22,8 +22,6 @@ const NavButton = (props) => {
     }
 
     const onMouseEnter = () => {
-        console.log('MOUSE ENTER  STEP:', fontSize, ' to ', expandedFontSize);
-
         setStep({
             fontSizeStart: fontSize,
             fontSizeEnd: expandedFontSize,
@@ -31,8 +29,6 @@ const NavButton = (props) => {
     }
 
     const onMouseLeave = () => {
-        console.log('MOUSE LEAVE');
-
         setStep({
             fontSizeStart: expandedFontSize,
             fontSizeEnd: fontSize,

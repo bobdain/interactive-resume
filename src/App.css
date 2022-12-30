@@ -76,6 +76,10 @@ body{
     height: 100px;
 }
 
+.corporate-logo-large  {
+    height: 120px;
+}
+
 .test-position { transform: translate(300px, 300px); }
 .portrait-position { transform: translate(-50%, -50%); }
 .image1-position { transform:  translate(-50%, -50%) rotate(-54deg) translate(380px) rotate(54deg); }

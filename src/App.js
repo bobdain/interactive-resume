@@ -1,6 +1,7 @@
 import './App.css';
 import Navbar from './components/Navbar';
-import ImageArray from './components/ImageArray';
+import JobImageArray from './components/JobImageArray';
+import SiteImageArray from './components/SiteImageArray';
 import { useReducer, createContext, useState, useEffect } from 'react';
 import ButtonStateContext from './components/ButtonState';
 import Store from './Store'
@@ -36,7 +37,7 @@ function App() {
             <Navbar  windowWidth={windowSize[0]}/>
             <div className='image-area'>
                 <div className='circle-container' >
-                    <ImageArray windowWidth={windowSize[0]} />
+                    <SiteImageArray windowWidth={windowSize[0]} />
                 </div>
             </div>
         </Store.Provider>
