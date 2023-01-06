@@ -66,6 +66,13 @@ body{
     left: 50%;
 }
 
+.card-position {
+    display: block;
+    position: relative;
+    top: 0%; 
+    left: 0%;
+}
+
 .portrait {
     background-color: rgb(204, 201, 201);
     padding: 5px;
@@ -82,15 +89,28 @@ body{
 
 .test-position { transform: translate(300px, 300px); }
 .portrait-position { transform: translate(-50%, -50%); }
-.image1-position { transform:  translate(-50%, -50%) rotate(-54deg) translate(380px) rotate(54deg); }
-.image2-position { transform:  translate(-50%, -50%) rotate(-23deg) translate(380px) rotate(23deg); }
-.image3-position { transform:  translate(-50%, -50%) rotate(8deg) translate(380px) rotate(-8deg); }
-.image4-position { transform:  translate(-50%, -50%) rotate(39deg) translate(380px) rotate(-39deg); }
-.image5-position { transform:  translate(-50%, -50%) rotate(90deg) translate(380px) rotate(-90deg); }
-.image6-position { transform:  translate(-50%, -50%) rotate(141deg) translate(380px) rotate(-141deg); }
-.image7-position { transform:  translate(-50%, -50%) rotate(172deg) translate(380px) rotate(-172deg); }
-.image8-position { transform:  translate(-50%, -50%) rotate(203deg) translate(380px) rotate(-203deg); }
-.image9-position { transform:  translate(-50%, -50%) rotate(234deg) translate(380px) rotate(-234deg); }
+.image1of9-position { transform:  translate(-50%, -50%) rotate(-54deg) translate(380px) rotate(54deg); }
+.image2of9-position { transform:  translate(-50%, -50%) rotate(-23deg) translate(380px) rotate(23deg); }
+.image3of9-position { transform:  translate(-50%, -50%) rotate(8deg) translate(380px) rotate(-8deg); }
+.image4of9-position { transform:  translate(-50%, -50%) rotate(39deg) translate(380px) rotate(-39deg); }
+.image5of9-position { transform:  translate(-50%, -50%) rotate(90deg) translate(380px) rotate(-90deg); }
+.image6of9-position { transform:  translate(-50%, -50%) rotate(141deg) translate(380px) rotate(-141deg); }
+.image7of9-position { transform:  translate(-50%, -50%) rotate(172deg) translate(380px) rotate(-172deg); }
+.image8of9-position { transform:  translate(-50%, -50%) rotate(203deg) translate(380px) rotate(-203deg); }
+.image9of9-position { transform:  translate(-50%, -50%) rotate(234deg) translate(380px) rotate(-234deg); }
+
+.image1of5-position { transform:  translate(-50%, -50%) rotate(-30deg) translate(380px) rotate(30deg); }
+.image2of5-position { transform:  translate(-50%, -50%) rotate(20deg) translate(380px) rotate(-20deg); }
+.image3of5-position { transform:  translate(-50%, -50%) rotate(90deg) translate(380px) rotate(-90deg); }
+.image4of5-position { transform:  translate(-50%, -50%) rotate(160deg) translate(380px) rotate(-160deg); }
+.image5of5-position { transform:  translate(-50%, -50%) rotate(210deg) translate(380px) rotate(-210deg); }
+
+.card-style { 
+    margin-top: 100px;
+    color: white;
+    font-size: 19px;
+}
+
 
 .rotate-ccw-10 {
     transform: rotate(-10deg);
@@ -98,4 +118,8 @@ body{
 
 .rotate-cw-10 {
     transform: rotate(10deg);
+}
+
+.test-text {
+    color: white;
 }

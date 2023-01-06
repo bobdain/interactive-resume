@@ -8,13 +8,13 @@ import { useWindowWidth } from '@react-hook/window-size'
 
 const SiteImageArray = (props) => {
     const websiteImages = [
-        { img: countryMeadow, alt: 'Country Meadow Ltd. logo', class: 'fixed-position corporate-logo image2-position' },
-        { img: dotsDots, alt: 'Dot\'s Dots game logo', class: 'fixed-position corporate-logo image3-position' },
+        { image: countryMeadow, alt: 'Country Meadow Ltd. logo', class: 'fixed-position corporate-logo image1of5-position' },
+        { image: dotsDots, alt: 'Dot\'s Dots game logo', class: 'fixed-position corporate-logo image2of5-position' },
 
-        { img: goVerbs, alt: 'GoVerbs logo', class: 'fixed-position corporate-logo-large image5-position' },
+        { image: goVerbs, alt: 'GoVerbs logo', class: 'fixed-position corporate-logo-large image3of5-position' },
 
-        { img: fredsMaze, alt: 'Fred\'s Maze game logo', class: 'fixed-position corporate-logo image7-position' },
-        { img: nucampSite, alt: 'Nucamp-site logo', class: 'fixed-position corporate-logo image8-position' },
+        { image: fredsMaze, alt: 'Fred\'s Maze game logo', class: 'fixed-position corporate-logo image4of5-position' },
+        { image: nucampSite, alt: 'Nucamp-site logo', class: 'fixed-position corporate-logo image5of5-position' },
 
         //{ img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];
@@ -24,6 +24,8 @@ const SiteImageArray = (props) => {
             {websiteImages.map((message, index) => (
                 <ArrayImage key={index} image={message} />
             ))}
+            
+            {/* TEST: window width */}
             <p className='window-size-test test-position'>{ props.windowWidth }</p>
         </div>
     )
