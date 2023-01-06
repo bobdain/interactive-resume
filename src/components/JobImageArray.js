@@ -13,44 +13,62 @@ import { useWindowWidth } from '@react-hook/window-size'
 
 const JobImageArray = (props) => {
     const workHistoryImages = [
-        { image: Kymeta, 
+        {
+            image: Kymeta,
             tooltip: '2018-2020 (short-term contracting)',
-            alt: 'Kymeta logo', 
-            class: 'fixed-position corporate-logo image1of9-position' },
-        { image: Tektronix, 
+            alt: 'Kymeta logo',
+            class: 'fixed-position corporate-logo image1of9-position'
+        },
+        {
+            image: Tektronix,
             tooltip: '2018-2020 (short-term contracting)',
-            alt: 'Tektronix logo', 
-            class: 'fixed-position corporate-logo image2of9-position' },
-        { image: Fujifilm, 
+            alt: 'Tektronix logo',
+            class: 'fixed-position corporate-logo image2of9-position'
+        },
+        {
+            image: Fujifilm,
             tooltip: '2018-2020 (short-term contracting)',
-            alt: 'Fujifilm logo', 
-            class: 'fixed-position corporate-logo image3of9-position' },
-        { image: InMusic, 
+            alt: 'Fujifilm logo',
+            class: 'fixed-position corporate-logo image3of9-position'
+        },
+        {
+            image: InMusic,
             tooltip: '2018-2020 (short-term contracting)',
-            alt: 'In Music logo', 
-            class: 'fixed-position corporate-logo image4of9-position' },
+            alt: 'In Music logo',
+            class: 'fixed-position corporate-logo image4of9-position'
+        },
 
-        { image: Boeing, 
+        {
+            image: Boeing,
             tooltip: '2018-2020 (short-term contracting)',
-            alt: 'Boeing logo', 
-            class: 'fixed-position corporate-logo image5of9-position' },
+            alt: 'Boeing logo',
+            class: 'fixed-position corporate-logo image5of9-position'
+        },
 
-        { image: ThermoFisher, 
+        {
+            image: ThermoFisher,
             tooltip: '2011-2017',
-            alt: 'Thermo Fisher logo', 
-            class: 'fixed-position corporate-logo image6of9-position' },
-        { image: Elektrobit, 
+            alt: 'Thermo Fisher logo',
+            class: 'fixed-position corporate-logo image6of9-position'
+        },
+        {
+            image: Elektrobit,
             tooltip: '2008-2011',
-            alt: 'Elektrobit logo', 
-            class: 'fixed-position corporate-logo image7of9-position' },
-        { image: Microsoft, 
+            alt: 'Elektrobit logo',
+            class: 'fixed-position corporate-logo image7of9-position'
+        },
+        {
+            image: Microsoft,
             tooltip: '2004-2008',
-            alt: 'Microsoft logo', 
-            class: 'fixed-position corporate-logo image8of9-position' },
-        { image: Schneider, 
+            alt: 'Microsoft logo',
+            class: 'fixed-position corporate-logo image8of9-position'
+        },
+        {
+            image: Schneider,
             tooltip: '2020 - Present',
-            alt: 'Schneider Electric logo', 
-            class: 'fixed-position corporate-logo image9of9-position' },
+            alt: 'Schneider Electric logo',
+            class: 'fixed-position corporate-logo image9of9-position'
+        },
 
         //{ img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];
@@ -62,7 +80,7 @@ const JobImageArray = (props) => {
             ))}
 
             {/* TEST: window width */}
-            <p className='window-size-test test-position'>{ props.windowWidth }</p>
+            <p className='window-size-test test-position'>{props.windowWidth}</p>
         </div>
     )
 }

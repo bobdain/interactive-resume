@@ -26,7 +26,7 @@ const ArrayImage = (props) => {
         setIsHover(false);
     }
 
-    const cardClass = imageClass + ' card-style';
+    const tooltipClass = imageClass + ' tooltip-style';
 
     return (
         <>
@@ -39,7 +39,7 @@ const ArrayImage = (props) => {
                 onClick={onClick} />
            
             {isHover &&
-                <div className={cardClass}>
+                <div className={tooltipClass}>
                     {props.image.tooltip}
                 </div>
             }

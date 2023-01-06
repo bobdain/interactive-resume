@@ -105,7 +105,7 @@ body{
 .image4of5-position { transform:  translate(-50%, -50%) rotate(160deg) translate(380px) rotate(-160deg); }
 .image5of5-position { transform:  translate(-50%, -50%) rotate(210deg) translate(380px) rotate(-210deg); }
 
-.card-style { 
+.tooltip-style { 
     margin-top: 100px;
     color: white;
     font-size: 19px;
