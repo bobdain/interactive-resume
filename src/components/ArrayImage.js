@@ -14,9 +14,11 @@ const ArrayImage = (props) => {
 
     const [isHover, setIsHover] = useState(false);
 
-    const onClick = () => {
+    const onClick = props.onClick;
+
+    //const onClick = () => {
         //state.setSelectedButton(props.buttonId);
-    }
+    //}
 
     const onMouseEnter = () => {
         setIsHover(true);

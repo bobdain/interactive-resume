@@ -44,10 +44,12 @@ const SiteImageArray = (props) => {
         //{ img: Portrait, alt: 'a hard working guy', class: 'fixed-position portrait-position portrait' }
     ];
 
+    const onClick = () => {console.log("hi bob")};
+
     return (
         <div className='images-container'>
             {websiteImages.map((message, index) => (
-                <ArrayImage key={index} image={message} />
+                <ArrayImage key={index} image={message} onClick={onClick} />
             ))}
 
             {/* TEST: window width */}
